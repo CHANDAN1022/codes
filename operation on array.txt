@@ -1,0 +1,152 @@
+#include <stdio.h>
+
+#include<stdlib.h>
+
+int main()
+
+{
+
+
+int Top=-1,I=1,a,stack[5],C;
+
+choice :
+
+{
+
+printf("enter the operation you want to perform   1. Insertion  2. deletion  3. traversing    ");
+
+scanf("%d",&C);
+}
+
+switch(C)
+
+{
+
+case 1:
+
+if(Top==4)
+
+{
+    
+printf("The Stack is Full");
+
+}
+
+else
+
+{
+
+while(I)
+
+{
+
+printf("DO You Want To Insert");
+
+scanf("%d",&I);
+
+if(I)
+
+{
+
+  
+  printf("enter the value to insert");
+  
+  scanf("%d",&a);
+}
+else
+{
+    break;
+
+}
+    
+if(Top==5)
+    
+{
+     
+   printf("The Stack Is Full");
+  
+  }
+   
+ else
+   
+ {
+
+    Top=Top+1;
+ 
+   stack[Top]=a;  
+  
+    }
+}
+}
+
+printf("Select the case 3 to print or traverse");
+
+scanf("%d",&I);
+
+
+if(I)
+
+{
+ 
+   goto choice;
+}
+
+    
+break;
+
+case 2:
+
+if(Top==-1)
+
+{
+ 
+   printf("The  Stack is Empty");
+
+}
+
+else
+
+{
+
+while(I)
+
+{
+
+printf("DO You Want To delete");
+
+scanf("%d",&I);
+
+if(I)
+
+{
+
+stack[Top]=NULL;
+
+Top=Top-1;
+    }
+
+    else
+    
+{
+        break;
+    
+}
+}
+}
+
+ break;
+ 
+
+ case 3:
+ 
+printf("the elements in the array is ");
+
+ for(I=0;I<=Top;I++)
+
+ printf("%d\n",stack[I]);
+
+}
+
+    return 0;
+
+}
